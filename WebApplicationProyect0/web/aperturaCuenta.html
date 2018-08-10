@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Aperturar Cuenta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link  rel="stylesheet" href="CSS/cargando.css">
+        <script type="text/javascript" src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/aperturaCuenta.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="nav nav-tabs"  >
+                        <li><a href="index.html">Inicio</a></li>
+                        <li class="active"><a href="">Aperturar Cuenta</a></li>   
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <form method='POST' action="aperturarCuenta">
+                <div class="form-group">
+                    <label>Ingrese su DNI</label>
+                    <div><input class="form-control" placeholder="Numero de DNI" type="text" name="dni" required  pattern="[0-9]{8}"></div>
+                </div>           
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <div class="password"> <input class="form-control" placeholder="Password" type="password" name="password" required></div>                          
+                </div>
+                <div class="form-group">
+                    <label>Repetir su Contraseña</label>
+                    <div class="password"> <input  class="form-control" placeholder="Password" type="password" name="password" required></div>                          
+                    <span id="confirmar"></span>
+                </div> 
+                <input class="btn btn-success" type="submit" value="Crear Cuenta">
+                <!--Animacion de Cargando -->
+                <div id="rpta"></div>
+            </form>
+            <!--Respuesta del Servidor -->
+            <div id="resultado">
+            </div>            
+        </div>
+    </body>
+</html>

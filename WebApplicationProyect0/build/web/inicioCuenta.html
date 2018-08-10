@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Iniciar Session Cuenta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link  rel="stylesheet" href="CSS/cargando.css">
+        <script type="text/javascript" src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/inicioCuenta.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   
+    <style>
+                #resultado{
+                    margin-top: 5px;
+                }
+</style>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="nav nav-tabs">
+                    <li><a href="index.html">SB</a></li>
+                    <li class="active"><a href="">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container">
+        <div class="col-md-6">
+            <form class="form-horizontal text-right" action="verificarCuenta" method="POST">
+                <div class="form-group">
+                    <label class="control-label col-md-3">NumCuenta</label>
+                        <div  class="col-md-9"><input class="form-control" placeholder="NumCuenta" type="text" name="id" required  pattern="[0-9]{8}"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Password</label>
+                        <div class="col-md-9"> <input class="form-control" placeholder="Password" type="password" name="password" required></div>                          
+                    </div> 
+                    
+                    <input class="btn btn-success " type="submit" value="Iniciar Session">
+                   
+                    <!-- ANIMACIOON DE CARGANDO ...-->
+                <div id="rpta"></div>
+            </form>
+            <!-- Respuesta del Servidor-->
+            <div id="resultado">
+            </div> 
+        </div>
+        </div>
+
+    </body>
+</html>

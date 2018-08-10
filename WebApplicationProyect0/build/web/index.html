@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>SB</title>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0,minimun-scale=1.0'>
+        <link rel='stylesheet' href='CSS/bootstrap.min.css'>
+        <link rel='stylesheet' href='CSS/cargando.css'>
+        <script type="text/javascript" src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="js/index.js"></script> 
+    </head>
+    <body>  
+        <header>
+            <!-- MENU DE NAVEGACION DE LA PAGINA-->
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <!-- Collapsed, solo se mostrara para dispositivos moviles, ESTAMOS TRABAJANDO CON RESPONSIVE-->
+                    <div class="navbar-header">
+                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion">
+                            <!-- Para dispositivos de lectura que no puedan reconocer el button -->
+                            <span class="sr-only">Desplegar/Ocultar</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">SB</a>
+                    </div>
+                    <!--Menu Inicia-->
+                    <div class="collapse navbar-collapse" id="navegacion">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Inicio</a></li>
+                        </ul>
+                        <div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="inicioCuenta"><strong>Ingresar </strong></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="aperturaCuenta.html">Aperturar una Cuenta</a>
+                            </ul>
+                            <form class="navbar-form navbar-right" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="buscar">
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <!-- Para colocar el icono se usa los fonts de Bootstrap-->
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--Culmina el menu de Navegacion -->
+        <!-- FORMULARIO REGISTRO DE DATOS -->
+        <div class="container">
+            <form id="form" method="post" action="registrarDatos">
+                <h4>Registrarse</h4> 
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input class="form-control" placeholder="Apellidos y Nombres" required name="nombre" type="text">
+                </div>
+                <div class="form-group">
+                    <label >DNI</label>
+                    <input class="form-control" placeholder="Numero de DNI" name="dni" required type="text" pattern="[0-9]{8}">
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">&#64;</div>
+                        <input class="form-control" placeholder="Correo Electronico" name="email" type="email">
+                    </div>
+                </div>
+                <input class="btn btn-success" type="submit" value="Registrarse"> 
+                <!-- ANIMACIOON DE CARGANDO ...-->
+                <div id="rpta"></div>
+            </form>
+            <!-- Respuesta del Servidor-->
+            <div id="resultado">
+            </div>              
+        </div>
+
+    </body>
+</html>
